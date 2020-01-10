@@ -155,6 +155,25 @@
 		</class>
 	</classes>
 	<menus>
+		<menu id="ConfigManagementOverview" xsi:type="DashboardMenuNode" _delta="must_exist">
+			<rank>1</rank>
+			<parent>ConfigManagement</parent>
+			<definition>
+				<layout>DashboardLayoutOneCol</layout>
+				<title/>
+				<cells>
+					<cell id="4" _delta="must_exist"> <!-- Dashboard -> Miscellaneous -->
+						<rank>0</rank>
+						<dashlets>
+							<dashlet id="89" xsi:type="DashletBadge" _delta="define">
+								<rank>1</rank>
+								<class>Zone</class>
+							</dashlet>
+						</dashlets>
+					</cell>
+				</cells>
+			</definition>
+		</menu>
 	</menus>
 	<user_rights>
 		<groups>

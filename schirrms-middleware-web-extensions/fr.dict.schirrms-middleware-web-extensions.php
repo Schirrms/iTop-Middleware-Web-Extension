@@ -8,5 +8,14 @@
 
 Dict::Add('FR FR', 'French', 'Français', array(
 	// Dictionary entries go here
+	'Class:Zone' => 'Zone opérationelle',
+	'Class:Zone+' => 'Definit des zones opérationnelles de fonctionnement pour les éléments (Intranet, Internet...)',
+	'Class:Zone/Attribute:name' => 'Nom de la zone',
+	'Class:Zone/Attribute:org_id' => 'Identifiant Organisation',
+	'Class:Zone/Attribute:org_name' => 'Organisation',
+	'Class:Zone/Attribute:comment' => 'Commentaire',
+	'Class:Zone/Attribute:functional_cis_list' => 'Composants dans cette zone',
+	'Class:Zone/Attribute:org_id_friendlyname' => 'Nom complet de l\'organisation',
+	'Class:Zone/Attribute:org_id_obsolescence_flag' => 'Statut d\'obsolescence de l\'organisation',
 ));
 ?>
