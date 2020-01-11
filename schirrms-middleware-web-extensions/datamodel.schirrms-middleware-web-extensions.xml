@@ -123,9 +123,6 @@
 			<presentation>
 				<details>
 					<items>
-						<item id="project_id" _delta="define">
-							<rank>42</rank>
-						</item>
 						<item id="usage_id" _delta="define">
 							<rank>44</rank>
 						</item>
@@ -140,9 +137,6 @@
 			<presentation>
 				<details>
 					<items>
-						<item id="project_id" _delta="define">
-							<rank>42</rank>
-						</item>
 						<item id="usage_id" _delta="define">
 							<rank>44</rank>
 						</item>
