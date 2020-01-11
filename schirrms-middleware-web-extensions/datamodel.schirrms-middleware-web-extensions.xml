@@ -130,6 +130,25 @@
 				</details>
 			</presentation>
 		</class>
+		<class id="MiddlewareInstance" _delta="must_exist">
+			<properties _delta="must_exist">
+				<naming _delta="redefine">
+					<attributes>
+						<attribute id="name"/>
+						<attribute id="middleware_name"/>
+					</attributes>
+				</naming>
+			</properties>
+			<presentation>
+				<details>
+					<items>
+						<item id="zone_id" _delta="define">
+							<rank>46</rank>
+						</item>
+					</items>
+				</details>
+			</presentation>
+		</class>
 		<class id="WebServer" _delta="must_exist">
 			<presentation>
 				<details>
