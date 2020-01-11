@@ -120,6 +120,13 @@
 			</fields>
 		</class>
 		<class id="Middleware" _delta="must_exist">
+			<properties _delta="must_exist">
+				<naming _delta="redefine">
+					<attributes>
+						<attribute id="name"/>
+					</attributes>
+				</naming>
+			</properties>
 			<presentation>
 				<details>
 					<items>
@@ -134,11 +141,18 @@
 			<properties _delta="must_exist">
 				<naming _delta="redefine">
 					<attributes>
-						<attribute id="name"/>
+						<attribute id="system_name"/>
 						<attribute id="middleware_name"/>
+						<attribute id="name"/>
 					</attributes>
 				</naming>
 			</properties>
+			<fields>
+				<field id="system_name" xsi:type="AttributeExternalField" _delta="define">
+					<extkey_attcode>middleware_id</extkey_attcode>
+					<target_attcode>system_name</target_attcode>
+				</field>
+			</fields>
 			<presentation>
 				<details>
 					<items>
