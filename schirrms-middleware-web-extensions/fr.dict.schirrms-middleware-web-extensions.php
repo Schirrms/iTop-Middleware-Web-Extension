@@ -17,7 +17,7 @@ Dict::Add('FR FR', 'French', 'Français', array(
 	'Class:Zone/Attribute:functional_cis_list' => 'CIs dans cette zone',
 	'Class:Zone/Attribute:org_id_friendlyname' => 'Nom complet de l\'organisation',
 	'Class:Zone/Attribute:org_id_obsolescence_flag' => 'Statut d\'obsolescence de l\'organisation',
-	'Class:FunctionnalCI/Attribute:zone_id' => 'Zone opérationelle',
+	'Class:FunctionalCI/Attribute:zone_id' => 'Zone opérationelle',
 	'Class:MiddlewareInstance/Attribute:portno' => 'N° de port',
 	'Class:MiddlewareInstance/Attribute:uri' => 'URI',
 	'Class:MiddlewareInstance/Attribute:url' => 'URL complète',

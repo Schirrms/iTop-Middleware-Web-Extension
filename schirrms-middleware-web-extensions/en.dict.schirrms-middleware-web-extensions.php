@@ -17,7 +17,7 @@ Dict::Add('EN US', 'English', 'English', array(
 	'Class:Zone/Attribute:functional_cis_list' => 'CI in that zone',
 	'Class:Zone/Attribute:org_id_friendlyname' => 'Organization Full Name',
 	'Class:Zone/Attribute:org_id_obsolescence_flag' => 'Organization obsolescence status',
-	'Class:FunctionnalCI/Attribute:zone_id' => 'Operational zone',
+	'Class:FunctionalCI/Attribute:zone_id' => 'Operational zone',
 	'Class:MiddlewareInstance/Attribute:portno' => 'Port Number',
 	'Class:MiddlewareInstance/Attribute:uri' => 'URI',
 	'Class:MiddlewareInstance/Attribute:url' => 'Complete URL',
