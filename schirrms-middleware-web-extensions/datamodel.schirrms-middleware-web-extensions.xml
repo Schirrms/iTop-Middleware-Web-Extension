@@ -295,7 +295,7 @@
 				</naming>
 			</properties>
 			<fields>
-				<field id="webproxy_list" xsi:type="AttributeLinkedSet">
+				<field id="webproxy_list" xsi:type="AttributeLinkedSet" _delta="define">
 					<linked_class>WebProxy</linked_class>
 					<ext_key_to_me>webserver_id</ext_key_to_me>
 					<edit_mode>in_place</edit_mode>
