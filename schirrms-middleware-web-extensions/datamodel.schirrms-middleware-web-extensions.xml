@@ -294,11 +294,24 @@
 					</attributes>
 				</naming>
 			</properties>
+			<fields>
+				<field id="webproxy_list" xsi:type="AttributeLinkedSet">
+					<linked_class>WebProxy</linked_class>
+					<ext_key_to_me>webserver_id</ext_key_to_me>
+					<edit_mode>in_place</edit_mode>
+					<tracking_level>all</tracking_level>
+					<count_min>0</count_min>
+					<count_max>0</count_max>
+				</field>
+			</fields>
 			<presentation>
 				<details>
 					<items>
 						<item id="zone_id" _delta="define">
 							<rank>46</rank>
+						</item>
+						<item id="webproxy_list">
+							<rank>152</rank>
 						</item>
 					</items>
 				</details>
@@ -338,25 +351,203 @@
 				<details>
 					<items>
 						<item id="zone_id" _delta="define">
-							<rank>26</rank>
+							<rank>56</rank>
 						</item>
 					</items>
 				</details>
 				<search>
 					<items>
 						<item id="zone_id" _delta="define">
-							<rank>26</rank>
+							<rank>56</rank>
 						</item>
 					</items>
 				</search>
 				<list>
 					<items>
 						<item id="zone_id" _delta="define">
-							<rank>26</rank>
+							<rank>56</rank>
 						</item>
 					</items>
 				</list>
 			</presentation>
+		</class>
+		<class id="WebProxy" _delta="define">
+			<parent>FunctionalCI</parent>
+			<properties>
+				<category>bizmodel,searchable</category>
+				<abstract>false</abstract>
+				<key_type>autoincrement</key_type>
+				<db_table>webproxy</db_table>
+				<db_key_field>id</db_key_field>
+				<db_final_class_field/>
+				<naming>
+					<attributes>
+						<attribute id="system_name"/>
+						<attribute id="webserver_name"/>
+						<attribute id="name"/>
+					</attributes>
+				</naming>
+				<display_template/>
+				<icon>images/webproxy.png</icon>
+				<reconciliation>
+					<attributes>
+						<attribute id="name"/>
+						<attribute id="org_id"/>
+						<attribute id="organization_name"/>
+					</attributes>
+				</reconciliation>
+				<obsolescence>
+					<condition>webserver_id_obsolescence_flag</condition>
+				</obsolescence>
+			</properties>
+			<fields>
+				<field id="webserver_id" xsi:type="AttributeExternalKey">
+					<sql>webserver_id</sql>
+					<target_class>WebServer</target_class>
+					<is_null_allowed>false</is_null_allowed>
+					<on_target_delete>DEL_MANUAL</on_target_delete>
+				</field>
+				<field id="webserver_name" xsi:type="AttributeExternalField">
+					<extkey_attcode>webserver_id</extkey_attcode>
+					<target_attcode>name</target_attcode>
+				</field>
+				<field id="system_name" xsi:type="AttributeExternalField">
+					<extkey_attcode>webserver_id</extkey_attcode>
+					<target_attcode>system_name</target_attcode>
+				</field>
+				<field id="srcurl" xsi:type="AttributeURL">
+					<sql>srcurl</sql>
+					<default_value/>
+					<is_null_allowed>true</is_null_allowed>
+					<target>_blank</target>
+				</field>
+				<field id="dsturl" xsi:type="AttributeURL">
+					<sql>dsturl</sql>
+					<default_value/>
+					<is_null_allowed>true</is_null_allowed>
+					<target>_blank</target>
+				</field>
+				<field id="sso" xsi:type="AttributeEnum">
+					<values>
+						<value id="No">No</value>
+						<value id="OpenAM">OpenAM</value>
+						<value id="AD">AD</value>
+					</values>
+					<sql>sso</sql>
+					<default_value>No</default_value>
+					<is_null_allowed>true</is_null_allowed>
+					<display_style>radio_horizontal</display_style>
+				</field>
+				<field id="mode" xsi:type="AttributeString">
+					<sql>mode</sql>
+					<is_null_allowed>true</is_null_allowed>
+					<default_value/>
+				</field>
+			</fields>
+			<presentation>
+				<details>
+					<items>
+						<item id="name">
+							<rank>10</rank>
+						</item>
+						<item id="org_id">
+							<rank>20</rank>
+						</item>
+						<item id="webserver_id">
+							<rank>30</rank>
+						</item>
+						<item id="srcurl">
+							<rank>40</rank>
+						</item>
+						<item id="dsturl">
+							<rank>42</rank>
+						</item>
+						<item id="sso">
+							<rank>44</rank>
+						</item>
+						<item id="mode">
+							<rank>46</rank>
+						</item>
+						<item id="business_criticity">
+							<rank>50</rank>
+						</item>
+						<item id="project_id">
+							<rank>52</rank>
+						</item>
+						<item id="usage_id">
+							<rank>54</rank>
+						</item>
+						<item id="zone_id">
+							<rank>56</rank>
+						</item>
+						<item id="move2production">
+							<rank>60</rank>
+						</item>
+						<item id="description">
+							<rank>70</rank>
+						</item>
+						<item id="contacts_list">
+							<rank>80</rank>
+						</item>
+						<item id="documents_list">
+							<rank>90</rank>
+						</item>
+						<item id="applicationsolution_list">
+							<rank>110</rank>
+						</item>
+						<item id="providercontracts_list">
+							<rank>120</rank>
+						</item>
+						<item id="services_list">
+							<rank>130</rank>
+						</item>
+					</items>
+				</details>
+				<default_search>
+					<items>
+						<item id="friendlyname">
+							<rank>10</rank>
+						</item>
+						<item id="webserver_id">
+							<rank>20</rank>
+						</item>
+						<item id="org_id">
+							<rank>30</rank>
+						</item>
+					</items>
+				</default_search>
+				<search>
+					<items>
+						<item id="name">
+							<rank>10</rank>
+						</item>
+						<item id="org_id">
+							<rank>20</rank>
+						</item>
+						<item id="business_criticity">
+							<rank>30</rank>
+						</item>
+						<item id="move2production">
+							<rank>40</rank>
+						</item>
+					</items>
+				</search>
+				<list>
+					<items>
+						<item id="org_id">
+							<rank>10</rank>
+						</item>
+						<item id="business_criticity">
+							<rank>20</rank>
+						</item>
+						<item id="move2production">
+							<rank>30</rank>
+						</item>
+					</items>
+				</list>
+			</presentation>
+			<methods>
+			</methods>
 		</class>
 	</classes>
 	<menus>
@@ -367,6 +558,15 @@
 				<layout>DashboardLayoutOneCol</layout>
 				<title/>
 				<cells>
+					<cell id="3" _delta="must_exist"> <!-- Dashboard -> Software & apps -->
+						<rank>0</rank>
+						<dashlets>
+							<dashlet id="109" xsi:type="DashletBadge" _delta="define">
+								<rank>1</rank>
+								<class>WebProxy</class>
+							</dashlet>
+						</dashlets>
+					</cell>
 					<cell id="4" _delta="must_exist"> <!-- Dashboard -> Miscellaneous -->
 						<rank>0</rank>
 						<dashlets>
