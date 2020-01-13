@@ -222,6 +222,16 @@
 					<default_value></default_value>
 					<is_null_allowed>true</is_null_allowed>
 				</field>
+				<field id="localaccount" xsi:type="AttributeString" _delta="define">
+					<sql>localaccount</sql>
+					<default_value></default_value>
+					<is_null_allowed>true</is_null_allowed>
+				</field>
+				<field id="homecontainer" xsi:type="AttributeString" _delta="define">
+					<sql>homecontainer</sql>
+					<default_value></default_value>
+					<is_null_allowed>true</is_null_allowed>
+				</field>
 				<field id="uri" xsi:type="AttributeString" _delta="define">
 					<sql>uri</sql>
 					<default_value></default_value>
@@ -241,13 +251,19 @@
 							<rank>46</rank>
 						</item>
 						<item id="portno" _delta="define">
-							<rank>47</rank>
+							<rank>52</rank>
+						</item>
+						<item id="localaccount" _delta="define">
+							<rank>53</rank>
+						</item>
+						<item id="homecontainer" _delta="define">
+							<rank>54</rank>
 						</item>
 						<item id="uri" _delta="define">
-							<rank>48</rank>
+							<rank>55</rank>
 						</item>
 						<item id="url" _delta="define">
-							<rank>49</rank>
+							<rank>56</rank>
 						</item>
 					</items>
 				</details>
@@ -257,13 +273,19 @@
 							<rank>46</rank>
 						</item>
 						<item id="portno" _delta="define">
-							<rank>47</rank>
+							<rank>52</rank>
+						</item>
+						<item id="localaccount" _delta="define">
+							<rank>53</rank>
+						</item>
+						<item id="homecontainer" _delta="define">
+							<rank>54</rank>
 						</item>
 						<item id="uri" _delta="define">
-							<rank>48</rank>
+							<rank>55</rank>
 						</item>
 						<item id="url" _delta="define">
-							<rank>49</rank>
+							<rank>56</rank>
 						</item>
 					</items>
 				</search>
@@ -273,13 +295,18 @@
 							<rank>46</rank>
 						</item>
 						<item id="portno" _delta="define">
-							<rank>47</rank>
+							<rank>52</rank>
+						<item id="localaccount" _delta="define">
+							<rank>53</rank>
+						</item>
+						<item id="homecontainer" _delta="define">
+							<rank>54</rank>
 						</item>
 						<item id="uri" _delta="define">
-							<rank>48</rank>
+							<rank>55</rank>
 						</item>
 						<item id="url" _delta="define">
-							<rank>49</rank>
+							<rank>56</rank>
 						</item>
 					</items>
 				</list>
