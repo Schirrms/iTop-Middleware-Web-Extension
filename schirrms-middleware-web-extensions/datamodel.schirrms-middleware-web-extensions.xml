@@ -296,6 +296,7 @@
 						</item>
 						<item id="portno" _delta="define">
 							<rank>52</rank>
+						</item>
 						<item id="localaccount" _delta="define">
 							<rank>53</rank>
 						</item>
